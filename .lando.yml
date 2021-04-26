@@ -1,0 +1,7 @@
+name: sandbox-landophp74
+services:
+  myservice:
+    type: php:7.4
+    xdebug: true
+    build:
+      - composer install
