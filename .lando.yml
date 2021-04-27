@@ -1,7 +1,11 @@
 name: sandbox-landophp74
 services:
-  myservice:
+  appserver:
     type: php:7.4
     xdebug: true
+    overrides:
+      environment:
+        # Support debugging Drush with XDEBUG.
+        PHP_IDE_CONFIG: "serverName=appserver"
     build:
       - composer install

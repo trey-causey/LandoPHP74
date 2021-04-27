@@ -11,21 +11,17 @@ class Solution1672 {
      * @return Integer
      */
     function maximumWealth($accounts) {
-        /*$ans = 0;
-        foreach ($accounts as $customer)
-        {
+        $ans = 0;
+        foreach ($accounts as $customer) {
             $runningSum = 0;
-            foreach ($customer as $element)
-            {
+            foreach ($customer as $element) {
                 $runningSum += $element;
             }
-            if($runningSum > $ans)
-            {
+            if ($runningSum > $ans) {
                 $ans = $runningSum;
             }
         }
-        return $ans;*/
-       $ans = max(array_map('array_sum', $accounts));
+/*       $ans = max(array_map('array_sum', $accounts));*/
        return $ans;
     }
 }
